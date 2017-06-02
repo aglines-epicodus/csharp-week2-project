@@ -35,6 +35,8 @@ Using "a" or "1" gives the reader a sense that we are at the beginning of things
 | Reasoning: app should not attempt to count substrings | | |
 | Numbers, punctuation, and symbols will count the same as letters | "11 !!", "11" | 1 |
 | Reasoning: app should be able to treat non-alpha characters in the same way | | |
+| Non-matching characters should not produce a match at all | "zzz", "a" | 0 |
+| Reasoning: A complete test suite should include tests that shouldn't possibly match | | |
 
 
 ## Setup/Installation Requirements
