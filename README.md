@@ -1,8 +1,8 @@
-# Test title
+# Wordcount
 
 #### Weekly project for C Sharp
 
-#### **By Andrew Glines**
+#### **By Andrew Glines for Epicodus**
 
 ## Description
 
@@ -10,15 +10,17 @@ This application will count the number of times a specified word appears in a st
 The user will supply both the specified word and the string to be searched.
 The application will not search substrings; only full-word matches will count.
 In order to handle more types of text, the application will convert all input to lower case.
+Numbers, punctuation, and symbols should all count as matchable words.
 
 A 'word' is defined as any set of characters separated by one or more whitespace characters.
-Numbers, punctuation, and symbols should all count as matchable words.
 
 
 ## Behavior, Inputs, and Reasoning
 
 A general statement on the reasoning behind choosing particular input values:
+
 Where possible, checking a single character will be faster than checking longer strings.
+
 Using "a" or "1" gives the reader a sense that we are at the beginning of things, instead of deep into a concept.
 
 |  behavior | input  | output  |
