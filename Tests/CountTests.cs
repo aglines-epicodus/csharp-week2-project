@@ -41,5 +41,17 @@ namespace Wordcount
       int result = RepeatCounter.CountRepeats(testInputWord, testInputString);
       Assert.Equal(expectedCount, result);
     }
+
+    // | Input "aa", "a" | Output 0 |
+    [Fact]
+    public void CountRepeats_NoSubstringAccepted_Returns0()
+    {
+      string testInputString = "aa";
+      string testInputWord = "a";
+      int expectedCount = 0;
+      int result = RepeatCounter.CountRepeats(testInputWord, testInputString);
+      Assert.Equal(expectedCount, result);
+    }
+
   }
 }
