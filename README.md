@@ -17,18 +17,22 @@ Numbers, punctuation, and symbols should all count as matchable words.
 
 ## Behavior, Inputs, and Reasoning
 
+A general statement on the reasoning behind choosing particular input values:
+Where possible, checking a single character will be faster than checking longer strings.
+Using "a" or "1" gives the reader a sense that we are at the beginning of things, instead of deep into a concept.
+
 |  behavior | input  | output  |
 |---|---|---|
 | If the user enters "a" and searches for "a", the app should count one | "a", "a" | 1 |
-| Reason for this input: simplest test is using a one-letter word | | |
+| Reasoning: the simplest test is using inputs that match exactly | | |
+| If the user enters "A" and searches for "a", the app should count one | "A", "a" | 1 |
+| Reasoning for this input: upper and lower case should be made equivalent before other tests are run | | |
 | If the user enters "a a" and searches for "a", the app should count two | "a a", "a" | 2 |
-| Reasoning: any string separated by space counts as a word  | | |
+| Reasoning: app should recognize that a word is simply strings separated by whitespace  | | |
 | If the user enters "aa" and searches for "a", the app should count zero | "aa", "a" | 0 |
-| Reasoning: substrings are not to be counted | | |
+| Reasoning: app should not attempt to count substrings | | |
 | Numbers, punctuation, and symbols will count the same as letters | "11 !!", "11" | 1 |
-| Reasoning: numbers will also count as a word | | |
-
-
+| Reasoning: app should be able to treat non-alpha characters in the same way | | |
 
 
 ## Setup/Installation Requirements
