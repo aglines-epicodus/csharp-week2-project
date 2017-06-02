@@ -18,5 +18,19 @@ namespace Wordcount
       //Assert
       Assert.Equal(expectedCount, result);
     }
+
+    [Fact]
+    public void CountRepeats_UpperCaseInput_Returns1()
+    {
+      string testInputWord = "A";
+      string testInputString = "a";
+      int expectedCount = 1;
+      int result = RepeatCounter.CountRepeats(testInputWord, testInputString);
+      Assert.Equal(expectedCount, result);
+    }
+
+
+
+
   }
 }
