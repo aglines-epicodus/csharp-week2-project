@@ -10,10 +10,11 @@ namespace Wordcount
     public void CountRepeats_SingleWordInput_Returns1()
     {
       //Arrange
-      string testInput = "a";
+      string testInputWord = "a";
+      string testInputString = "a";
       int expectedCount = 1;
       //Act
-      int result = RepeatCounter.CountRepeats(testInput);
+      int result = RepeatCounter.CountRepeats(testInputWord, testInputString);
       //Assert
       Assert.Equal(expectedCount, result);
     }
