@@ -22,15 +22,11 @@ namespace Wordcount
     [Fact]
     public void CountRepeats_UpperCaseInput_Returns1()
     {
-      string testInputWord = "A";
-      string testInputString = "a";
+      string testInputWord = "a";
+      string testInputString = "A";
       int expectedCount = 1;
       int result = RepeatCounter.CountRepeats(testInputWord, testInputString);
       Assert.Equal(expectedCount, result);
     }
-
-
-
-
   }
 }
