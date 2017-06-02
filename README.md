@@ -15,23 +15,18 @@ A 'word' is defined as any set of characters separated by one or more whitespace
 Numbers, punctuation, and symbols should all count as matchable words.
 
 
+## Behavior, Inputs, and Reasoning
+
 |  behavior | input  | output  |
 |---|---|---|
 | If the user enters "a" and searches for "a", the app should count one | "a", "a" | 1 |
-| Reason for this input: simplest way to start is testing one letter | | |
-|---|---|---|
-
+| Reason for this input: simplest test is using a one-letter word | | |
 | If the user enters "a a" and searches for "a", the app should count two | "a a", "a" | 2 |
-| Reason for this input:  | | |
-|---|---|---|
-
-| If the user enters "aaa" and searches for "a", the app should count zero | "aaa", "a" | 0 |
-| Reason for this input:  | | |
-|---|---|---|
-
-| Numbers, punctuation, and symbols will count the same as letters | "123 $,%,^ 123", "123" | 2 |
-| Reason for this input:  | | |
-|---|---|---|
+| Reasoning: any string separated by space counts as a word  | | |
+| If the user enters "aa" and searches for "a", the app should count zero | "aa", "a" | 0 |
+| Reasoning: substrings are not to be counted | | |
+| Numbers, punctuation, and symbols will count the same as letters | "11 !!", "11" | 1 |
+| Reasoning: numbers will also count as a word | | |
 
 
 
