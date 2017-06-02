@@ -9,28 +9,30 @@ namespace Wordcount
 
     public static int CountRepeats(string userInputWord, string userInputString)
     {
-      // accept two strings as input
-      // split one on whitespace - tho this is NEXT test
-      // create an array of strings, split on whitespace
+      int currentCount = 0;
+      // handle upper-case input
       string userInputStringToLower = userInputString.ToLower();
       Console.WriteLine(userInputStringToLower, userInputString);
-      // string[] userInputAsArray = userInputString.Split(' ');
-      // foreach (string word in userInputAsArray)
-      // {
-      //   Console.WriteLine(word);
-      // check whether string2 is present, whole-word fashion, in str1
-      // for now, THIS is the code that will pass the test
-      // I don't need some "contains" method, just need equals
-      if (userInputWord == userInputStringToLower)
-      {
-        return 1;
-      }
 
-      else
+      // create an array of strings, split on whitespace
+      string[] userInputAsArray = userInputStringToLower.Split(' ');
+
+      //loop thru array, check each word for match
+      foreach (string currentWord in userInputAsArray)
       {
-        return 0;
+        // Console.WriteLine("current word is: ", currentWord);
+
+        if (currentWord == userInputWord)
+        {
+          Console.WriteLine (" yes match");
+          currentCount++;
+        }
+        else
+        {
+          Console.WriteLine (" no match");
+        }
       }
-      // }
+      return currentCount;
 
 
 
