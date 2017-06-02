@@ -41,10 +41,10 @@ Using "a" or "1" gives the reader a sense that we are at the beginning of things
 
 ## Setup/Installation Requirements
 
-Go to Github repository page at (insert link here)
+Go to Github repository page at https://github.com/aglines-epicodus/csharp-week2-project
 Click the "download or clone" button and copy the link.
-In your computers terminal type "git clone" & paste the copied link.
-Once downloaded you can open the index.html file in the browser of your choice.
+In your computer's terminal type "git clone" and paste the copied link.
+Once downloaded you can open the root html file in the browser of your choice.
 You can view the code using the text editor of your choice as well.
 
 ## Known Bugs
@@ -59,9 +59,10 @@ If you have any issues or have questions, ideas, concerns, or contributions plea
 
 * HTML
 * CSS
-* Javascript
 * Bootstrap
 * JSON
+* Nancy
+* Razor
 * xUnit
 * C#
 

@@ -8,7 +8,6 @@ namespace Wordcount
   {
     public HomeModule()
     {
-      //code
       Get["/"] = _ => View["submitword.cshtml"];
 
       Post["/result"] = _ =>

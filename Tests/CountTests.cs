@@ -10,13 +10,10 @@ namespace Wordcount
     [Fact]
     public void CountRepeats_SingleWordInput_Returns1()
     {
-      //Arrange
       string testInputString = "a";
       string testInputWord = "a";
       int expectedCount = 1;
-      //Act
       int result = RepeatCounter.CountRepeats(testInputWord, testInputString);
-      //Assert
       Assert.Equal(expectedCount, result);
     }
 
@@ -53,7 +50,7 @@ namespace Wordcount
       Assert.Equal(expectedCount, result);
     }
 
-    // | Input "11 !!", "11" | Output 1
+    // | Input "11 !!", "11" | Output 1 |
     [Fact]
     public void CountRepeats_NumbersEtcAccepted_Returns1()
     {
@@ -64,7 +61,7 @@ namespace Wordcount
       Assert.Equal(expectedCount, result);
     }
 
-    // No possibility of matching
+    // No possibility of matching - Input "zzz", "a" | Output 0 |
     [Fact]
     public void CountRepeats_NoPossibleMatch_Returns0()
     {
