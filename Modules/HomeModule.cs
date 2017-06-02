@@ -9,7 +9,15 @@ namespace Wordcount
     public HomeModule()
     {
       //code
-      Get["/"] = _ => "Hello world";
+      Get["/"] = _ => View["submitword.cshtml"];
+
+      Post["/result"] = _ =>
+      {
+        string userInputWord = Request.Form["user-input-word"];
+        string userInputString = Request.Form["user-input-string"];
+        int countOfRepeats = RepeatCounter.CountRepeats(userInputWord, userInputString);
+        return View["result.cshtml", countOfRepeats];
+      };
     }
   }
 }

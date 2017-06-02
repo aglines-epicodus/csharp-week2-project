@@ -24,25 +24,16 @@ namespace Wordcount
 
         if (currentWord == userInputWord)
         {
-          Console.WriteLine (" yes match");
+          // Console.WriteLine (" yes match");
           currentCount++;
         }
         else
         {
-          Console.WriteLine (" no match");
+          currentCount = currentCount;
+          // Console.WriteLine (" no match");
         }
       }
       return currentCount;
-
-
-
-      // return the number of times it is present
-
-
-      // i suppose you split the input on whitespace,
-      // feed into an ... array? list? ugh figure it out andy
-      // loop thru array, incrementing count each time it hits
-
     }
   }
 }
